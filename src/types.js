@@ -14,13 +14,15 @@ import {
   DAY_OF_WEEK,
   IOS_DISPLAY,
   IOS_MODE,
+  WEB_MODE,
 } from './constants';
 
 export type IOSDisplay = $Keys<typeof IOS_DISPLAY>;
 export type IOSMode = $Keys<typeof IOS_MODE>;
-type AndroidMode = $Keys<typeof ANDROID_MODE>;
+export type AndroidMode = $Keys<typeof ANDROID_MODE>;
+export type WebMode = $Keys<typeof WEB_MODE>;
 type Display = $Keys<typeof ANDROID_DISPLAY>;
-type MinuteInterval = ?(1 | 2 | 3 | 4 | 5 | 6 | 10 | 12 | 15 | 20 | 30);
+export type MinuteInterval = ?(1 | 2 | 3 | 4 | 5 | 6 | 10 | 12 | 15 | 20 | 30);
 
 export type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -143,6 +145,17 @@ export type AndroidNativeProps = $ReadOnly<{|
 
   onChange: (event: AndroidEvent, date?: Date) => void,
   neutralButtonLabel?: string,
+|}>;
+
+export type WebNativeProps = $ReadOnly<{|
+  ...BaseProps,
+  ...DateOptions,
+  ...TimeOptions,
+
+  /**
+   * The date picker mode.
+   */
+  mode: WebMode,
 |}>;
 
 export type DatePickerOptions = {|

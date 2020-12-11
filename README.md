@@ -138,7 +138,7 @@ export const App = () => {
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
-    setShow(Platform.OS === 'ios');
+    setShow(Platform.OS === 'ios' || Platform.OS === 'web');
     setDate(currentDate);
   };
 

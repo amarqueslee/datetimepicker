@@ -31,6 +31,12 @@ export const IOS_MODE = Object.freeze({
   countdown: 'countdown',
 });
 
+export const WEB_MODE = Object.freeze({
+  date: 'date',
+  time: 'time',
+  datetime: 'datetime',
+});
+
 export const IOS_DISPLAY = Object.freeze({
   default: 'default',
   spinner: 'spinner',
