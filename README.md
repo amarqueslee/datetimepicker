@@ -12,7 +12,7 @@ The module is still published on `npm` under the old namespace (as documented) b
 ![MIT License][license-badge]
 [![Lean Core Badge][lean-core-badge]][lean-core-issue]
 
-React Native date & time picker component for iOS, Android and Windows.
+React Native date & time picker component for iOS, Android, Windows, and most popular Web browsers.
 
 <table>
   <tr><td colspan=2><strong>iOS</strong></td></tr>

@@ -16,7 +16,7 @@ import React from 'react';
 import type {Event, WebNativeProps} from './types';
 import {toWebInputFormat, fromWebEventFormat} from './utils';
 
-export default function Picker({
+export default function DateTimePicker({
   value,
   mode,
   maximumDate,
@@ -29,7 +29,7 @@ export default function Picker({
     onChange && onChange(event, newValue);
   };
 
-  invariant(value, 'A date or time should be specified as `value`.');
+  invariant(value instanceof Date, 'A date or time should be specified as `value`.');
 
   // It seems 'datetime' is a deprecated type for 'input' tag, 'datetime-local' is the modern replacement.
   const inputType: string = mode === 'datetime' ? 'datetime-local' : mode;
@@ -46,6 +46,6 @@ export default function Picker({
   );
 }
 
-Picker.defaultProps = {
+DateTimePicker.defaultProps = {
   mode: MODE_DATE,
 };
